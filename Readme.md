@@ -1,4 +1,31 @@
+# Subcheck 🚀
 
+A lightweight, blazing-fast CLI tool written in Golang to check if subdomains from a text file are live (active). It is designed primarily for Bug Bounty hunters, Penetration Testers, and Security Researchers to quickly filter out dead subdomains from large recon lists.
+
+## ✨ Features
+
+- **Blazing Fast:** Uses Go routines for concurrent scanning, allowing thousands of subdomains to be checked simultaneously.
+- **Protocol Fallback:** Automatically checks `HTTPS` first, and falls back to `HTTP` if the secure connection fails.
+- **Highly Customizable:** Easily adjust the number of concurrent threads and request timeouts.
+- **Redirect Skip:** Ignores HTTP redirects to save time and bandwidth.
+- **SSL Bypass:** Successfully checks sites with invalid or self-signed SSL certificates.
+
+## 🛠️ Installation
+
+### Build from Source
+
+Make sure you have [Go](https://golang.org/dl/) installed on your system.
+
+```bash
+# Clone the repository
+git clone https://github.com/YOUR_USERNAME/subcheck.git
+cd subcheck
+
+# Build the binary
+go build -o subcheck main.go
+
+# Give execute permissions
+chmod +x subcheck
 
 ## 📖 Usage
 
